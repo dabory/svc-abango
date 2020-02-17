@@ -6,7 +6,7 @@ Note : You need golang, node and yarn installed for this. And the server runs at
 
 To run the server, use this command
 
-#### Step 0: Linux: Ubuntu 16.04.4 LTS \n \l  ; recommended Linux version
+#### Step 0: Linux: Ubuntu 16.04.4 LTS \n \l  : recommended Linux version
 #### Step 1: Install: Go version go1.11 linux/amd64
 #### Step 2: Install: Go libraries
 `$ go get -u google.golang.org/grpc`
@@ -32,11 +32,12 @@ To run the grpc server, using this command
 `$ cd $GOPATH/src/github.com/dabory/svc-abango`
 
 #### Step 3: Change Open port if you need in conf/ folder files
-`$ vi conf/run_conf.json`
+`$ vi conf/config_select.json`
 
-`$ vi conf/xxx_conf.json`  ; liked conf file
+`$ vi conf/xxx_config.json`  ; liked conf file
 
 #### Step 5: Create MySQL Tables : extract table schema from kangan_db-191125.sql 
 
-#### Step 4: Run go lang server
+#### Step 4: Run go lang server; You should run Kafka first to run Kafka API
+
 `$ fresh`
