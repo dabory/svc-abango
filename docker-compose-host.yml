@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+
+   api:
+     build:
+       context: .
+       network: host
+     container_name: github.com/dabory/svc-abango
+     image: github.com/dabory/svc-abango:latest
+     volumes:
+       - .:/go/src/github.com/dabory/svc-abango
+       - ..:/go/src
+     command: fresh
+    #  command: go version
+     ports:
+       - "8081:8081"
+       - "10443:10443"
+     restart: always

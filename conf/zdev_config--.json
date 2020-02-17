@@ -1,0 +1,25 @@
+{
+	"FrontVars": [
+		{ "Key": "AppName", "Value": "Dabory e-Commerse" },
+		{ "Key": "SiteName", "Value": "Dabory" },
+		{ "Key": "HttpProtocol", "Value": "tcp" },
+		{ "Key": "HttpAddr", "Value": "0.0.0.0" },
+		{ "Key": "HttpPort", "Value": "10049" },
+
+		{ "Key": "DbType", "Value": "mysql" },
+		{ "Key": "DbHost", "Value": "aurora-biozoa.clhvwtdfc3ov.ap-northeast-2.rds.amazonaws.com" },
+		{ "Key": "DbPort", "Value": "3306" },
+		{ "Key": "DbUser", "Value": "kangan_db" },
+		{ "Key": "DbPassword", "Value": "sAt7H4AynUBXvYJ7" },
+        { "Key": "DbName", "Value": "kangan_db" },
+		{ "Key": "DbPrefix", "Value": "" },
+        { "Key": "DbTz", "Value": "Asis/Seoul" },
+
+		{ "Key": "KafkaTopic", "Value": "test" },
+		{ "Key": "KafkaAddr", "Value": "0.0.0.0" },
+		{ "Key": "KafkaPort", "Value": "10049" },
+
+		{ "Key": "Dummy", "Value": 134200 }
+	]
+
+}

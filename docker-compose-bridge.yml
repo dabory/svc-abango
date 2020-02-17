@@ -1,0 +1,65 @@
+version: '2'
+
+services:
+   db: 
+     container_name: mysql-c
+     image: mysql:5.7
+     volumes:
+       - ../../../mysql/databases:/var/lib/mysql
+       - ../backups:/go/src/backups
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: root
+       TZ: UTC 
+     networks:
+       - docker-network 
+
+   api:
+     build: .
+     container_name: github.com/dabory/svc-abango
+     image: github.com/dabory/svc-abango:latest
+     volumes:
+       - .:/go/src/github.com/dabory/svc-abango
+       - ..:/go/src
+#     working_dir: /go/src/ppgo-api
+     command: fresh
+    #  command: go version
+     ports:
+       - "8081:8081"
+       - "10443:10443"
+     depends_on:
+       - db
+     restart: always
+     networks:
+       - docker-network 
+
+   phpmyadmin:
+     depends_on:
+       - db
+     container_name: myadmin-c
+     image: phpmyadmin/phpmyadmin:latest
+     ports:
+       - "13306:80"
+     restart: always
+     networks:
+       - docker-network 
+
+#   web:
+#     build: .
+#     container_name: go-passcon 
+#     image: go-passcon:latest
+#     volumes:
+#       - ../passcon:/go/src/passcon
+#     working_dir: /go/src/passcon
+#     command: bee run 
+#     ports:
+#       - "28281:28281"
+#     depends_on:
+#       - db
+#     restart: always
+#     networks:
+#       - docker-network 
+
+networks:
+   docker-network: 
+     driver: bridge

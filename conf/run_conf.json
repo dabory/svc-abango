@@ -1,0 +1,6 @@
+{
+    "RunMode": "stage",
+    "DBLog": true,
+
+    "ConfPostFix": "_conf.json"
+}

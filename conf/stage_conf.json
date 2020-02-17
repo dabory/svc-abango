@@ -1,0 +1,17 @@
+{
+    "AppName": "KangAn Device Monitor",
+    "HttpProtocol": "tcp",
+    "HttpAddr": "0.0.0.0",
+    "HttpPort": "10049",
+    "SiteName": "KangAn Site",
+
+    "DbType": "mysql",
+    "DbHost": "aurora-biozoa.clhvwtdfc3ov.ap-northeast-2.rds.amazonaws.com",
+    "DbUser": "kangan_db",
+    "DbPassword": "sAt7H4AynUBXvYJ7",
+    "DbPort": "3306",
+    "DbName": "kangan_db",
+    "DbPrefix": "",
+    "DbTimezone": "Asis/Seoul"
+
+}

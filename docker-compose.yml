@@ -1,0 +1,24 @@
+version: '3.4'
+
+services:
+ 
+  api:
+    build:
+      context: ./build-docker/golang-docker
+      network: host
+    container_name: svc-abango
+    image: svc-abango:latest
+    volumes:
+      - .:/go/src/github.com/dabory/svc-abango   # change this when moving folder
+      - ../../../:/go/src  # change this when moving folder
+    command: fresh -c runner.conf  # check conf file
+  #  command: go version
+    ports:
+      # - "9092:9092"
+      - "10049:10049"
+      - "80:80"
+      - "18080:18080"
+      - "10443:10443"
+  #  depends_on:
+  #    - db
+    restart: always
