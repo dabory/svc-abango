@@ -36,9 +36,9 @@ To run the grpc server, using this command
 
 `$ vi conf/xxx_config.json`  ; liked conf file
 
-#### Step 5: Create MySQL Tables : extract table schema from kangan_db-191125.sql 
+#### Step 4: Create MySQL Tables : extract table schema from kangan_db-191125.sql 
 
-#### Step 4: Run go lang server; You should run Kafka first to run Kafka API
-#### Step 5: Run docker-compose in Kafka folder
+#### Step 5: Run go lang server; You should run Kafka first to run Kafka API
+#### Step \6: Run docker-compose in Kafka folder
 
 `$ fresh`
