@@ -25,7 +25,7 @@ To run the server, use this command
 
 `$ cd $GOPATH/src`
 
-`$ git clone http://13.124.244.187:10080/kangan/github.com/dabory/svc-abango `
+`$ git clone https://github.com/dabory/svc-abango `
 
 To run the grpc server, using this command
 
