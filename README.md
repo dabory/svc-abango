@@ -1,4 +1,4 @@
-# gRPC KangAn How to
+# How to user example of abango service ; Svc-abango
 
 ## Running the server and client
 
