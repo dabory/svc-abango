@@ -19,11 +19,11 @@
 	{ "Key": "RestUri", "Value": "/" },
 
 	{ "Key": "DbType", "Value": "mysql" },
-	{ "Key": "DbHost", "Value": "aurora-biozoa.clhvwtdfc3ov.ap-northeast-2.rds.amazonaws.com" },
+	{ "Key": "DbHost", "Value": "localhost" },
 	{ "Key": "DbPort", "Value": "3306" },
-	{ "Key": "DbUser", "Value": "kangan_db" },
-	{ "Key": "DbPassword", "Value": "sAt7H4AynUBXvYJ7" },
-	{ "Key": "DbName", "Value": "kangan_db" },
+	{ "Key": "DbUser", "Value": "test_db" },
+	{ "Key": "DbPassword", "Value": "testest" },
+	{ "Key": "DbName", "Value": "test_db" },
 	{ "Key": "DbPrefix", "Value": "" },
 	{ "Key": "DbTz", "Value": "Asis/Seoul" }
 ]
