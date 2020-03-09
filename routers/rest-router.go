@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/dabory/svc-abango/controllers"
+	"dbrshop-svc/controllers"
 
 	"github.com/dabory/abango"
 	"github.com/labstack/echo"

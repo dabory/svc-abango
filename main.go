@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/dabory/svc-abango/routers"
+	"dbrshop-svc/routers"
 
 	"github.com/dabory/abango"
 )

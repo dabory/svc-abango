@@ -1,4 +1,4 @@
-package local
+package locals
 
 import (
 	e "github.com/dabory/abango/etc"

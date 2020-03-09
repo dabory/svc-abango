@@ -1,7 +1,7 @@
 package routers
 
 import (
-	"github.com/dabory/svc-abango/controllers"
+	"dbrshop-svc/controllers"
 
 	"github.com/dabory/abango"
 )
@@ -13,7 +13,14 @@ func KafkaRouter(ask *abango.AbangoAsk) {
 		var t controllers.LoginController
 		t.Init(*ask)
 		t.EditRow()
-	} else {
+	} else if askname == "admin-menu-act-row" {
+		var t controllers.AdminMenuController
+		t.Init(*ask)
+		t.ActRow()
+	} else if askname == "admin-menu-page" {
+		var t controllers.AdminMenuController
+		t.Init(*ask)
+		t.GetPage()
 	}
 
 }

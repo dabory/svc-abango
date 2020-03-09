@@ -1,13 +1,17 @@
 package controllers
 
 import (
+	"dbrshop-svc/locals"
 	"encoding/json"
-
-	lo "github.com/dabory/svc-abango/local"
 
 	"github.com/dabory/abango"
 	e "github.com/dabory/abango/etc"
 )
+
+type LoginReturn struct {
+	locals.AnswerBase
+	locals.Login
+}
 
 type LoginController struct {
 	abango.Controller
@@ -15,13 +19,17 @@ type LoginController struct {
 
 func (c *LoginController) EditRow() error {
 
-	var v lo.Login
+	var v locals.Login
+	var r LoginReturn
 	if err := json.Unmarshal(c.Ctx.Ask.Body, &v); err == nil {
-		// e.Tp(v)
-		c.Ctx.Answer.Body = c.Ctx.Ask.Body
-		c.Ctx.Answer.Status = []byte("200")
-		c.KafkaAnswer()
-		// return
+		r.UserId = v.UserId
+		r.Password = v.Password
+		r.SvcStatus = "200"
+		r.SvcMsg = "Everything is OK"
+		c.Data["json"] = r
+
+		c.AnswerJson()
+
 	} else {
 		return e.MyErr("salrqladksjfl-Unmarshal", err, false)
 	}

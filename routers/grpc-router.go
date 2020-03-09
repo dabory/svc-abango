@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 
-	"github.com/dabory/svc-abango/controllers"
+	"dbrshop-svc/controllers"
 
 	grp1 "github.com/dabory/abango/protos"
 
