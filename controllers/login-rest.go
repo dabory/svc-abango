@@ -19,7 +19,7 @@ func (t *LoginRestController) EditRow() error {
 	if err := json.Unmarshal(t.Ctx.Ask.Body, &v); err == nil {
 		// e.Tp(v)
 		t.Ctx.Answer.Body = t.Ctx.Ask.Body
-		t.Ctx.Answer.Status = []byte("200")
+		// t.Ctx.Answer.Body. = []byte("200")
 		// t.Answer()
 	} else {
 		return e.MyErr("salrqladksjfl-Unmarshal", err, false)
