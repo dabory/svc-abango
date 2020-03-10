@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"dbrshop-svc/locals"
+	"github.com/dabory/svc-abango/locals"
 	"encoding/json"
 
 	"github.com/dabory/abango"

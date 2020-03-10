@@ -6,10 +6,10 @@ services:
      build:
        context: .
        network: host
-     container_name: dbrshop-svc
-     image: dbrshop-svc:latest
+     container_name: github.com/dabory/svc-abango
+     image: github.com/dabory/svc-abango:latest
      volumes:
-       - .:/go/src/dbrshop-svc
+       - .:/go/src/github.com/dabory/svc-abango
        - ..:/go/src
      command: fresh
     #  command: go version

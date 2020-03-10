@@ -3,7 +3,7 @@ package routers
 import (
 	"net"
 
-	// grp1 "dbrshop-svc/protos"
+	// grp1 "github.com/dabory/svc-abango/protos"
 	grp1 "github.com/dabory/abango/protos"
 
 	"github.com/dabory/abango"
