@@ -9,7 +9,7 @@ services:
     container_name: svc-abango
     image: svc-abango:latest
     volumes:
-      - .:/go/src/github.com/dabory/svc-abango   # change this when moving folder
+      - .:/go/src/dbrshop-svc   # change this when moving folder
       - ../../../:/go/src  # change this when moving folder
     command: fresh -c runner.conf  # check conf file
   #  command: go version

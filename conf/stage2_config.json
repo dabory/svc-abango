@@ -5,14 +5,14 @@
 	{ "Key": "KafkaAddr", "Value": "49.247.7.101" },
 	{ "Key": "KafkaPort", "Value": "19092" },
 
-	{ "Key": "gRpcOn", "Value": "Yes" },
+	{ "Key": "gRpcOn", "Value": "No" },
 	{ "Key": "AppName", "Value": "Dabory e-Commerse" },
 	{ "Key": "SiteName", "Value": "Dabory" },
 	{ "Key": "gRpcProtocol", "Value": "tcp" },
 	{ "Key": "gRpcAddr", "Value": "0.0.0.0" },
 	{ "Key": "gRpcPort", "Value": "10049" },
 
-	{ "Key": "RestOn", "Value": "Yes" },
+	{ "Key": "RestOn", "Value": "No" },
 	{ "Key": "RestConnect", "Value": "0.0.0.0:18080" },
 	{ "Key": "RestUri", "Value": "/" },
 

@@ -16,10 +16,10 @@ services:
 
    api:
      build: .
-     container_name: github.com/dabory/svc-abango
-     image: github.com/dabory/svc-abango:latest
+     container_name: dbrshop-svc
+     image: dbrshop-svc:latest
      volumes:
-       - .:/go/src/github.com/dabory/svc-abango
+       - .:/go/src/dbrshop-svc
        - ..:/go/src
 #     working_dir: /go/src/ppgo-api
      command: fresh
