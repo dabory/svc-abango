@@ -3,6 +3,7 @@ package models
 import (
 	"dbrshop-svc/locals"
 	"errors"
+	"strconv"
 
 	e "github.com/dabory/abango/etc"
 	"github.com/go-xorm/xorm"
@@ -23,20 +24,15 @@ func (m *AdminMenu) TableName() string { // 반드시 있어야 table name을 �
 }
 
 func (m *AdminMenu) AddRow(db *xorm.Engine) (int64, error) {
-
 	if affected, err := db.Insert(m); affected == 1 && err == nil {
 		return m.Id, nil
 	} else {
 		if err != nil {
-			e.MyErr("ewrrwvczhu", err, false)
-			return 0, err
+			return 0, e.MyErr("["+strconv.Itoa(int(m.Id))+"]"+m.TableName(), err, false)
 		} else {
-			e.ErrLog("sdfrtbbms-Record Not saved in "+m.TableName(), nil)
-			return 0, errors.New("Record Not Added")
+			return 0, errors.New("[" + strconv.Itoa(int(m.Id)) + "] Not added in " + m.TableName())
 		}
 	}
-
-	return 0, nil
 }
 
 func (m *AdminMenu) EditRow(db *xorm.Engine) error {
@@ -44,30 +40,24 @@ func (m *AdminMenu) EditRow(db *xorm.Engine) error {
 		return nil
 	} else {
 		if err != nil {
-			e.MyErr("wefa34ferrqvcz", err, false)
-			return err
+			return e.MyErr("["+strconv.Itoa(int(m.Id))+"]"+m.TableName(), err, false)
 		} else {
-			e.ErrLog("fsdbvrers-Record Not updated in "+m.TableName(), nil)
-			return errors.New("Record Not updated")
+			return errors.New("[" + strconv.Itoa(int(m.Id)) + "] Not updated in " + m.TableName())
 		}
 	}
-
 }
 
-// func (t *UserDevice) DelRow() error {
-// 	if affected, err := abango.XDB.Id(t.Id).Delete(t); affected == 1 && err == nil {
-// 		return nil
-// 	} else {
-// 		if err != nil {
-// 			e.MyErr("ewrvbhgfuryt", err, false)
-// 			return err
-// 		} else {
-// 			e.ErrLog("sdfewdfafadf-Record Not deleted in "+t.TableName(), nil)
-// 			return errors.New("Record Not deleted")
-// 		}
-// 	}
-
-// }
+func (m *AdminMenu) DelRow(db *xorm.Engine) error {
+	if affected, err := db.Id(m.Id).Delete(m); affected == 1 && err == nil {
+		return nil
+	} else {
+		if err != nil {
+			return e.MyErr("["+strconv.Itoa(int(m.Id))+"]"+m.TableName(), err, false)
+		} else {
+			return errors.New("[" + strconv.Itoa(int(m.Id)) + "] Not deleted in " + m.TableName())
+		}
+	}
+}
 
 type AdminMenuPrt struct {
 	locals.AnswerBase

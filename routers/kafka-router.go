@@ -13,7 +13,7 @@ func KafkaRouter(ask *abango.AbangoAsk) {
 		var t controllers.LoginController
 		t.Init(*ask)
 		t.EditRow()
-	} else if askname == "admin-menu-act-row" {
+	} else if askname == "admin-menu-actrow" {
 		var t controllers.AdminMenuController
 		t.Init(*ask)
 		t.ActRow()
