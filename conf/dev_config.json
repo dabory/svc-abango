@@ -3,7 +3,7 @@
 	{ "Key": "KafkaOn", "Value": "Yes" },
 	{ "Key": "KafkaTopic", "Value": "dbr-basic" },
 	{ "Key": "KafkaAddr", "Value": "0.0.0.0" },
-	{ "Key": "KafkaPort", "Value": "19092" },
+	{ "Key": "KafkaPort", "Value": "9092" },
 
 	{ "Key": "gRpcOn", "Value": "Yes" },
 	{ "Key": "AppName", "Value": "Dabory e-Commerse" },
