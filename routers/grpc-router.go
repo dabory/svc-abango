@@ -36,6 +36,9 @@ func (s *grp1Server) StdRpc(c context.Context, ask *grp1.StdAsk) (*grp1.StdRet, 
 		t.Init(*v)
 		retbytes, retsta, err = t.EditRow()
 	} else {
+		var t controllers.NotFoundController
+		t.Init(*v)
+		t.NotFound()
 	}
 
 	ret := grp1.StdRet{

@@ -13,6 +13,10 @@ func KafkaRouter(ask *abango.AbangoAsk) {
 		var t controllers.LoginController
 		t.Init(*ask)
 		t.EditRow()
+	} else {
+		var t controllers.NotFoundController
+		t.Init(*ask)
+		t.NotFound()
 	}
 
 }

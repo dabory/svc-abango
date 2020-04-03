@@ -32,7 +32,9 @@ func RestRouter(c echo.Context) error {
 		t.EditRow()
 		return c.String(http.StatusOK, string(t.Ctx.Answer.Body))
 	} else {
-		return nil
+		var t controllers.NotFoundController
+		t.Init(*v)
+		t.NotFound()
 	}
 	return nil
 }

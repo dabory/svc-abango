@@ -1,8 +1,9 @@
 package controllers
 
 import (
-	"github.com/dabory/svc-abango/locals"
 	"encoding/json"
+
+	"github.com/dabory/svc-abango/locals"
 
 	"github.com/dabory/abango"
 	e "github.com/dabory/abango/etc"
