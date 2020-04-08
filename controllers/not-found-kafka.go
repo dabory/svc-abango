@@ -1,8 +1,9 @@
 package controllers
 
 import (
-	"dbrshop-svc/locals"
 	"encoding/json"
+
+	"github.com/dabory/svc-abango/locals"
 
 	"github.com/dabory/abango"
 	e "github.com/dabory/abango/etc"
@@ -16,7 +17,7 @@ func (c *NotFoundController) NotFound() error {
 
 	var r locals.AnswerBase
 	if err := json.Unmarshal(c.Ctx.Ask.Body, &r); err == nil {
-		r.SvcSts = "404"
+		r.SvcStatus = "404"
 		r.SvcMsg = "AskName [" + c.Ctx.Ask.AskName + "] Not Found !"
 		c.Data["json"] = r
 		c.AnswerJson()

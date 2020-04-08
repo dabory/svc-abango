@@ -1,11 +1,12 @@
 package models
 
 import (
-	"dbrshop-svc/locals"
+	// "dbrshop-svc/locals"
 	"errors"
 	"strconv"
 
 	e "github.com/dabory/abango/etc"
+	"github.com/dabory/svc-abango/locals"
 	"github.com/go-xorm/xorm"
 )
 
