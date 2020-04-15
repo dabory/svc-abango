@@ -13,7 +13,7 @@ import (
 
 func GrpcConnect() {
 
-	lis, err := net.Listen(abango.XConfig["gRpcProtocol"], abango.XConfig["gRpcAddr"]+":"+abango.XConfig["gRpcPort"])
+	lis, err := net.Listen("tcp", abango.XConfig["gRpcConnect"])
 	if err != nil {
 		e.MyErr("QERQDFGVXGJER-failed to listen in gRpc", err, true)
 	}
