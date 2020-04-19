@@ -17,10 +17,18 @@ func RestRouter(c echo.Context) error {
 	var v *abango.AbangoAsk
 
 	defer c.Request().Body.Close()
+
+	// // To show RequestBody Contents. !!! Use Json Validator First
+	// m := echo.Map{}
+	// if err := c.Bind(&m); err != nil {
+	// 	return err
+	// }
+	// return c.JSON(200, m)
+
 	err := json.NewDecoder(c.Request().Body).Decode(&v)
 	if err != nil {
-		return e.MyErr("QERQDFGVXGJER-Failed in Rest Request Body",
-			echo.NewHTTPError(http.StatusInternalServerError, err.Error), true)
+		return c.String(300, "QERQDFGVXGJER-Failed in Rest Request Body: "+
+			echo.NewHTTPError(http.StatusInternalServerError, err.Error).Error())
 	}
 
 	askname := v.AskName

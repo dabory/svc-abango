@@ -16,9 +16,17 @@ type LoginRestController struct {
 func (t *LoginRestController) EditRow() error {
 
 	var v locals.Login
+	var r LoginReturn
 	if err := json.Unmarshal(t.Ctx.Ask.Body, &v); err == nil {
 
-		t.Ctx.Answer.Body = t.Ctx.Ask.Body // t.Ctx.Answer.Body. = []byte("200")
+		r.UserId = v.UserId
+		r.Password = v.Password
+		r.SvcStatus = "200"
+		r.SvcMsg = "Everything is OK"
+
+		ret, _ := json.MarshalIndent(r, "", "  ")
+		t.Ctx.Answer.Body = ret // t.Ctx.Answer.Body. = []byte("200")
+		// ret, _ := json.Marshal(r)
 
 	} else {
 		return e.MyErr("salrqladksjfl-Unmarshal", err, false)

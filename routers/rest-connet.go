@@ -6,8 +6,14 @@ import (
 )
 
 func RestConnect(ask *abango.AbangoAsk) {
-	c := echo.New()
-	c.POST(abango.XConfig["RestUri"], RestRouter) // RestUri is fixed
+	e := echo.New()
+	e.POST("/", RestRouter) // RestUri is fixed
 
-	c.Logger.Fatal(c.Start(abango.XConfig["RestConnect"]))
+	// e.POST(abango.XConfig["RestUri"], func(c echo.Context) error {
+	// 	return c.String(http.StatusOK, "Hello World!")
+	// })
+	e.Logger.Fatal(e.Start(abango.XConfig["RestConnect"]))
+
+	// e.Logger.Fatal(e.Start(":18080")) // localhost:1323
+
 }

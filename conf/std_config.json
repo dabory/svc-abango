@@ -1,0 +1,13 @@
+[
+
+	{ "Key": "KafkaOn", "Value": "Yes" },
+	{ "Key": "KafkaTopic", "Value": "dbr-basic" },
+	{ "Key": "KafkaConnect", "Value": "49.247.7.101:19092" },
+
+	{ "Key": "gRpcOn", "Value": "Yes" },
+	{ "Key": "gRpcConnect", "Value": "0.0.0.0:10049" },
+
+	{ "Key": "RestOn", "Value": "Yes" },
+	{ "Key": "RestConnect", "Value": "0.0.0.0:18080" },
+	{ "Key": "RestUri", "Value": "/" }
+]
