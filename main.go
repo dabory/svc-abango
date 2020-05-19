@@ -9,7 +9,7 @@ import (
 )
 
 func init() {
-	fmt.Print("svc-abango should be run in $GOSRC/github.com/dabory/svc-abango/")
+	fmt.Print("!! Notice: svc-abango should be run in $GOSRC/github.com/dabory/svc-abango/")
 	abango.RunServicePoint(routers.KafkaRouter, routers.GrpcConnect, routers.RestConnect) // Do not change !!
 }
 
