@@ -1,5 +1,4 @@
 [
-
 	{ "Key": "KafkaOn", "Value": "Yes" },
 	{ "Key": "KafkaTopic", "Value": "dbr-basic" },
 	{ "Key": "KafkaConnect", "Value": "49.247.7.110:19092" },
