@@ -2,7 +2,7 @@
 
 	{ "Key": "KafkaOn", "Value": "Yes" },
 	{ "Key": "KafkaTopic", "Value": "dbr-basic" },
-	{ "Key": "KafkaConnect", "Value": "49.247.7.101:19092" },
+	{ "Key": "KafkaConnect", "Value": "49.247.7.110:19092" },
 
 	{ "Key": "gRpcOn", "Value": "Yes" },
 	{ "Key": "gRpcConnect", "Value": "0.0.0.0:10049" },

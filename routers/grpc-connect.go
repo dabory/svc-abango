@@ -15,7 +15,7 @@ func GrpcConnect() {
 
 	lis, err := net.Listen("tcp", abango.XConfig["gRpcConnect"])
 	if err != nil {
-		e.MyErr("QERQDFGVXGJER-failed to listen in gRpc", err, true)
+		e.MyErr("QWERWVZDSRTGFTW-failed to listen in gRpc", err, true)
 	}
 
 	grpcServer := grpc.NewServer()
